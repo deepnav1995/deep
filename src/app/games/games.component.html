@@ -1,0 +1,15 @@
+<h1 style="text-align:center">Select game</h1>
+<h3 [ngClass]="{'initial':!selectedGame,'selected':selectedGame}">Selected Game:{{selectedGame?selectedGamee:'----'}}</h3>;
+
+<div *ngIf="!showList" class="container">
+  <div *ngFor="let game of GamesArray">
+    <img [src]="game.ImageSrc" width="50%" height="50%" (click)="selectedGame = game.GameName; players = game.PlayersList; showList = true;">{{game.GameName}}
+    
+  </div>
+</div>
+<div *ngIf="showList">
+  <ul>
+    <li *ngFor="let player of players">{{player}}</li>
+  </ul>
+  <button (click)="showList = false; selectedGame = '';">Back</button>
+</div>

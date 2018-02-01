@@ -1,0 +1,48 @@
+<div id="navam">
+    <h1 style="text-align:center">Authentication</h1>
+    <form>
+      <div class="input">
+        
+        <input type="text" name="user" id="user" #user="ngModel" [(ngModel)]="usercheck.username" placeholder="Username">
+  
+      </div>
+      <div class="input">
+        
+        <input type="password" name="upw" id="upw" #upw="ngModel" [(ngModel)]="usercheck.userpw" placeholder="Password">
+      </div><br>
+      <div>
+        <button type="btn" value="login" (click)="check()">Login</button>
+        <button type="btn" value="signup" (click)="openModal(SignUpBlock)">Sign Up</button>
+      </div>
+    </form>
+    <ng-template #SignUpBlock>
+      <form #myForm="ngForm" (ngSubmit)="formData()"  name="myForm">
+          <div class="modal-header">
+              <h4 class="modal-title pull-left">Sign Up</h4>
+              <button type="button" class="close pull-right" aria-label="close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div>
+                <label>UserName</label>
+                <input [(ngModel)]="userdata.name" #username="ngModel" name="username" placeholder="Username" type="text" minlength="3" required>
+                <div *ngIf="username.errors">
+                  <small [style.color]="'red'" *ngIf="username.errors.required && username.touched">Name is required</small>
+                  <small [style.color]="'red'" *ngIf="username.errors.minlength && username.touched">mininum 3 charactors are required</small>
+                </div>
+              </div>
+              <div>
+                <label for="password">Password</label>
+                <input [(ngModel)]="userdata.password" #pw="ngModel" name="password" placeholder="password" type="password" minlength="6" required>
+                <div *ngIf="pw.errors">
+                  <small [style.color]="red" *ngIf="pw.errors.required && pw.touched">enter strong password</small>
+                  <small [style.color]="red" *ngIf="pw.errors.minlength && pw.touched">enter valid password</small>
+                </div>
+              </div>
+              <button [disabled]="!myForm.valid" (click)="adduser()">Sign Up</button>
+            </div>
+      </form>
+    </ng-template>
+    
+  </div>
