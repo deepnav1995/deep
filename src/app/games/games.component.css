@@ -13,11 +13,6 @@
     color:grey;
   background-color: antiquewhite;
   }
-  .container div{
-    height: 30%;
-    width: 30%;
-    display: inline-block;
-  }
   ul{
     list-style: none;
     font-size: 20px;

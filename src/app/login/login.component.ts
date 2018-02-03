@@ -1,4 +1,4 @@
-import { Component, OnInit,ViewChild,TemplateRef,EventEmitter } from '@angular/core';
+import { Component, OnInit,ViewChild,TemplateRef } from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import {FormsModule } from "@angular/forms";
@@ -31,6 +31,7 @@ export class LoginComponent implements OnInit {
   localStorage.setItem('name',this.userdata.name);
   localStorage.setItem('pw',this.userdata.password);
   alert('You have succesfully signed up');
+  this.tempForm.reset();
  }
  formData(){
   // this.userData = {

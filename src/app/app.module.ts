@@ -9,6 +9,7 @@ import { GamesComponent } from './games/games.component';
 import { RouterModule, Route } from "@angular/router";
 import{ UserService} from './user.service'
 import{ AuthguardGuard} from './authguard.guard'
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import{ AuthguardGuard} from './authguard.guard'
   ],
   imports: [
     BrowserModule,
+    CarouselModule.forRoot(),
     FormsModule,
     ModalModule.forRoot(),
     RouterModule.forRoot([{
