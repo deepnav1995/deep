@@ -3,7 +3,7 @@
 
 <div *ngIf="!showList" class="container">
   <div class="row">
-      <div *ngFor="let game of GamesArray" class="col-md-4">
+      <div *ngFor="let game of GamesArray" class="col-sm-4">
           <img [src]="game.ImageSrc" width="100%" height="100%" alt="lights" (click)="selectedGame = game.GameName; players = game.PlayersList; showList = true;"><div class="caption text-center bg-info text-black">{{game.GameName}}</div>
           
         </div>
@@ -11,6 +11,7 @@
   </div>
 </div>
 <div *ngIf="showList" class="container">
+  <input [(ngModel)]="playername" type="text" placeholder="Search name">
   <table class="table table-striped">
     <thead>
       <tr>
@@ -19,8 +20,8 @@
       </tr>
     </thead>
     <tbody >
-      <tr *ngFor="let player of players">
-        <td>{{player}}</td>
+      <tr *ngFor="let obj of players | search:playername;">
+        <td>{{obj}}</td>
       </tr>
 
     </tbody>

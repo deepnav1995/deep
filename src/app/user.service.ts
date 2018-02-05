@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class UserService {
-private isUserLoggedin;
+public isUserLoggedin;
 private Username;
   constructor() {
     this.isUserLoggedin=false;

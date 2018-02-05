@@ -1,4 +1,6 @@
-
+<div class="container">
+    <button type="button" class="btn btn-primary pull-right" (click)="openModal(template)">logout</button>
+</div>
 <div class="container">
         <h1 style="text-align:center">Importance of Sports</h1>
         <p style="color:black">Sport develops a sense of friendliness among the children and develop their team spirit. It helps children to develop mental and physical toughness. Sport shapes their body and make it strong and active. Children should actively participate in sports to avoid being tired and lethargy</p>
@@ -18,3 +20,20 @@
               </carousel>
         
 </div>      
+<ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">logout</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="ref.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h4>are you sure to logout</h4>
+      <button class="btn btn-info" (click)="logout();ref.hide()">Yes</button>
+      <button type="button" class="btn btn-primary"  (click)="ref.hide()">
+          No
+        </button>
+
+     
+    </div>
+  </ng-template>

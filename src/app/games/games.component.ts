@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamesComponent implements OnInit {
   GamesArray: any[];
+  playername:string;
   selectedGame: string;
   players: any[];
   showList: boolean;

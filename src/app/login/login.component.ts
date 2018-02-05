@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   localStorage.setItem('name',this.userdata.name);
   localStorage.setItem('pw',this.userdata.password);
   alert('You have succesfully signed up');
-  this.tempForm.reset();
+  //this.tempForm.reset();
  }
  formData(){
   // this.userData = {

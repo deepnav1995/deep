@@ -10,14 +10,15 @@ import { RouterModule, Route } from "@angular/router";
 import{ UserService} from './user.service'
 import{ AuthguardGuard} from './authguard.guard'
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-
+import{mypipe} from "./Pipes/pipe";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    GamesComponent
+    GamesComponent,
+    mypipe,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     ModalModule.forRoot(),
     RouterModule.forRoot([{
      path:'',
-     redirectTo:'home',
+     redirectTo:'login',
      pathMatch:'full' 
     },
   {

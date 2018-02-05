@@ -14,7 +14,9 @@ const routes: Route[] = [{
 })
 export class AppComponent  {
    constructor() { };;
-  
+  print(){
+    console.log('hello world');
+  }
 }
     
   
