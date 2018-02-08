@@ -1,23 +1,47 @@
  <div class="container">
-    <button type="button" class="btn btn-primary pull-right" (click)="openModal(template)">logout</button> 
+    <button type="button" 
+    class="btn btn-primary pull-right" 
+    (click)="openModal(template)">logout</button> 
 </div>
 
 
 <div class="container">
-        <h1 style="text-align:center">Importance of Sports</h1>
-        <p style="color:black">Sport develops a sense of friendliness among the children and develop their team spirit. It helps children to develop mental and physical toughness. Sport shapes their body and make it strong and active. Children should actively participate in sports to avoid being tired and lethargy</p>
+        <h1 
+        style="text-align:center">Importance of Sports</h1>
+        <p 
+        style="color:black">
+        Sport develops a sense of friendliness among the children and develop their team spirit. It helps children to develop mental and physical toughness. Sport shapes their body and make it strong and active. Children should actively participate in sports to avoid being tired and lethargy</p>
         
 </div>
 <div class="container">
         <carousel>
                 <slide>
-                  <img src="https://static.toiimg.com/photo/msid-62396312/62396312.jpg?307756" alt="steyn gun" style="display: block; width: 70%; height: 50%;" >
+                  <img src="https://static.toiimg.com/photo/msid-62396312/62396312.jpg?307756" 
+                  alt="steyn gun" 
+                  style="display: block; width: 70%; height: 50%;" >
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3 style="color:black">Steyn gun</h3>
+                    
+                  </div>
                 </slide>
                 <slide>
-                  <img src="https://wicdn.wisdenindia.com/wp-content/uploads/2013/08/Dravid.jpg" alt="the wall" style="display: block; width: 70%;height: 50%;">
+                  <img src="https://wicdn.wisdenindia.com/wp-content/uploads/2013/08/Dravid.jpg" 
+                  alt="the wall" 
+                  style="display: block; width: 70%;height: 50%;">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h3 style="color:Blue">The wall</h3>
+                    
+                  </div>
                 </slide>
                 <slide>
-                  <img src="https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2017/07/29/18/james-anderson.jpg"  alt="jimmy" style="display: block; width: 70%; height:50%;">
+                  <img 
+                  src="https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2017/07/29/18/james-anderson.jpg"  
+                  alt="jimmy" style="display: block; width: 70%; height:50%;">
+                  <div 
+                  class="carousel-caption d-none d-md-block">
+                    <h3 style="color:green">Swing master</h3>
+                    
+                  </div>
                 </slide>
               </carousel>
         
@@ -25,14 +49,18 @@
 <ng-template #template>
     <div class="modal-header">
       <h4 class="modal-title pull-left">logout</h4>
-      <button type="button" class="close pull-right" aria-label="Close" (click)="ref.hide()">
+      <button type="button" 
+      class="close pull-right" 
+      aria-label="Close" (click)="ref.hide()">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body">
       <h4>are you sure to logout</h4>
-      <button class="btn btn-info" (click)="logout();ref.hide()">Yes</button>
-      <button type="button" class="btn btn-primary"  (click)="ref.hide()">
+      <button class="btn btn-info" 
+      (click)="logout();ref.hide()">Yes</button>
+      <button type="button" 
+      class="btn btn-primary"  (click)="ref.hide()">
           No
         </button>
 
